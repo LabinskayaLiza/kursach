@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.kursach"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.kursach"
@@ -36,6 +36,9 @@ android {
 }
 
 dependencies {
+
+    implementation("androidx.navigation:navigation-fragment-ktx:2.8.5")
+    implementation("androidx.navigation:navigation-ui-ktx:2.8.5")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
