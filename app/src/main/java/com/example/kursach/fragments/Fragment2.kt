@@ -19,30 +19,13 @@ class Fragment2 : Fragment() {
         val recyclerView = view.findViewById<RecyclerView>(R.id.rcView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         val cafeItems = listOf(
-            Cafe("Cafe 1", "Description 1", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 2", "Description 2", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 3", "Description 3", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 1", "Description 1", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 2", "Description 2", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 3", "Description 3", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 1", "Description 1", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 2", "Description 2", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 3", "Description 3", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 1", "Description 1", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 2", "Description 2", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 3", "Description 3", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 1", "Description 1", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 2", "Description 2", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 3", "Description 3", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 1", "Description 1", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 2", "Description 2", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 3", "Description 3", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 1", "Description 1", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 2", "Description 2", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 3", "Description 3", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 1", "Description 1", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 2", "Description 2", "app/src/main/res/drawable/img.png"),
-            Cafe("Cafe 3", "Description 3", "app/src/main/res/drawable/img.png"),
+            Cafe("Cafe 1", "Description 1",  R.drawable.img_1),
+            Cafe("Cafe 2", "Description 2",  R.drawable.img),
+            Cafe("Cafe 3", "Description 3",  R.drawable.img_2),
+            Cafe("Cafe 1", "Description 1",  R.drawable.img),
+            Cafe("Cafe 2", "Description 2",  R.drawable.img_1),
+            Cafe("Cafe 3", "Description 3",  R.drawable.img),
+            Cafe("Cafe 1", "Description 1",  R.drawable.img_2),
             // ... more cafe items
         )
         val adapter = CafeAdapter(cafeItems)

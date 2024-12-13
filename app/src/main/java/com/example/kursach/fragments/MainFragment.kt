@@ -27,6 +27,16 @@ class MainFragment : Fragment() {
         val loginEditText = view.findViewById<EditText>(R.id.login_user)
         val passwordEditText = view.findViewById<EditText>(R.id.login_password)
         val controller = findNavController()
+        loginEditText.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
+            if (hasFocus && loginEditText.text.toString() == "Login") {
+                loginEditText.setText("")
+            }
+        }
+        passwordEditText.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
+            if (hasFocus && passwordEditText.text.toString() == "Password") {
+                passwordEditText.setText("")
+            }
+        }
         bF1.setOnClickListener{
             val login = loginEditText.text.toString().trim()
             val password = passwordEditText.text.toString().trim()

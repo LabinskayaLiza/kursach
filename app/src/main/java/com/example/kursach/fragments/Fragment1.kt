@@ -25,8 +25,25 @@ class Fragment1 : Fragment() {
         val bF1= view.findViewById<Button>(R.id.button_signin)
         val bF2= view.findViewById<TextView>(R.id.LogIn)
         val loginEditText = view.findViewById<EditText>(R.id.user_login)
+        val nameEditText = view.findViewById<EditText>(R.id.user_name)
         val passwordEditText = view.findViewById<EditText>(R.id.user_password)
         val controller = findNavController()
+
+        nameEditText.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
+            if (hasFocus && nameEditText.text.toString() == "Name") {
+                nameEditText.setText("")
+            }
+        }
+        loginEditText.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
+            if (hasFocus && loginEditText.text.toString() == "Login") {
+                loginEditText.setText("")
+            }
+        }
+        passwordEditText.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
+            if (hasFocus && passwordEditText.text.toString() == "Password") {
+                passwordEditText.setText("")
+            }
+        }
         bF1.setOnClickListener{
             val login = loginEditText.text.toString().trim()
             val password = passwordEditText.text.toString().trim()
