@@ -47,8 +47,9 @@ class Fragment1 : Fragment() {
         bF1.setOnClickListener{
             val login = loginEditText.text.toString().trim()
             val password = passwordEditText.text.toString().trim()
+            var name = nameEditText.text.toString().trim()
 
-            if (login.isEmpty() || password.isEmpty()) {
+            if (login.isEmpty() || password.isEmpty() || name.isEmpty() || login == "Login" || name == "Name" || password == "Password") {
                 Toast.makeText(requireContext(), "Не все поля заполнены", Toast.LENGTH_SHORT).show()
             } else {
                 controller.navigate(R.id.fragment2)
