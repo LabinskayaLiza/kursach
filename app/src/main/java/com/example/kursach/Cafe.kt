@@ -1,3 +1,7 @@
 package com.example.kursach
 
-data class Cafe(val title: String, val description: String, val imageResourceId: Int)
+data class Cafe(
+    val name: String,
+    val description: String,
+    val image: String
+)

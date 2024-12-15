@@ -74,7 +74,11 @@ class MainFragment : Fragment() {
                         }
                         val data: JsonElement = response.body()
                         if (data.asJsonObject["status"].asBoolean) {
-                            controller.navigate(R.id.fragment2)
+                            withContext(Dispatchers.Main) {
+                                loginEditText.setText("Login")
+                                passwordEditText.setText("Password")
+                                controller.navigate(R.id.fragment2)
+                            }
                         }
                     }catch (err: NoTransformationFoundException){
                         withContext(Dispatchers.Main) {
@@ -91,7 +95,6 @@ class MainFragment : Fragment() {
                         }
                     }
                 }
-
             }
         }
         bF2.setOnClickListener{controller.navigate(R.id.fragment1) }
