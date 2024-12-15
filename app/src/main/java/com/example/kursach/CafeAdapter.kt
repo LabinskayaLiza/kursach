@@ -23,11 +23,11 @@ class CafeAdapter(private val cafeItems: List<Cafe>) : RecyclerView.Adapter<Cafe
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val cafeItem = cafeItems[position]
-        holder.tvTitle.text = cafeItem.title
+        holder.tvTitle.text = cafeItem.name
         holder.tvDescription.text = cafeItem.description
         // Загрузка изображения с помощью Glide или Picasso
         Glide.with(holder.itemView.context)
-            .load(cafeItem.imageResourceId)
+            .load(cafeItem.image)
             .into(holder.im)
     }
     override fun getItemCount(): Int = cafeItems.size

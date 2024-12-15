@@ -42,6 +42,19 @@ dependencies {
 
     implementation("androidx.navigation:navigation-fragment-ktx:2.8.5")
     implementation("androidx.navigation:navigation-ui-ktx:2.8.5")
+    //coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
+    //HTTP
+    implementation("io.ktor:ktor-client-core:3.0.2")
+    implementation("io.ktor:ktor-client-android:3.0.2")
+    implementation("io.ktor:ktor-client-okhttp:3.0.2")
+    //JSON
+    implementation("io.ktor:ktor-client-content-negotiation:3.0.2")
+    implementation("io.ktor:ktor-serialization-gson:3.0.2")
+    //IMAGE
+    implementation("io.coil-kt.coil3:coil-compose:3.0.4")
+    implementation("io.coil-kt.coil3:coil-network-okhttp:3.0.4")
 
     implementation("com.github.bumptech.glide:glide:4.16.0") // Или другую библиотеку для загрузки изображений (Picasso)
     annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
